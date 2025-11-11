@@ -3,97 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>framcoty :: Technical Portfolio</title>
+  <title>Franco Aparicio (framcoty) :: Technical Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Monospaced font 'Hack'
-       If you don't have it, you can import it by uncommenting the line below
-       or just rely on 'Courier New' or 'monospace'
+    /* NUEVO TEMA: "Modern Dark Mode" (Profesional y Limpio)
     */
-    /* @import url('https://fonts.googleapis.com/css2?family=Hack:wght@400;700&display=swap'); */
 
     body {
-      font-family: 'Hack', 'Courier New', monospace;
-      background-color: #000000;
-      color: #00FF00; /* Bright green text color */
+      /* Fuente profesional Sans-Serif para legibilidad */
+      font-family: 'Lato', 'Arial', sans-serif;
+      font-weight: 300; /* Más ligero, más moderno */
+      background-color: #121212; /* Un negro/carbón muy oscuro */
+      color: #E0E0E0; /* Un blanco suave, no un blanco brillante */
       margin: 0;
       padding: 2rem;
-      /* Subtle scanlines effect (old monitor) */
-      background-image: linear-gradient(
-        0deg,
-        rgba(0, 255, 0, 0.1) 1px,
-        transparent 1px
-      );
-      background-size: 100% 4px;
+      max-width: 800px; /* Centra el contenido y lo hace legible */
+      margin: auto; /* Centra el contenedor */
     }
     
     h1, h2, h3 {
-      color: #00FF00;
-      text-shadow: 0 0 5px #00FF00; /* Slight glow */
+      color: #FFFFFF; /* Títulos en blanco puro para contraste */
+      font-weight: 700;
     }
 
-    h1::after {
-      content: '_';
-      animation: blink 1s infinite;
-      font-weight: bold;
-    }
-
-    /* Blinking cursor animation */
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    h2::before {
-      content: '[+] '; /* "Prompt" symbol */
+    h1 {
+      font-size: 2.5rem; /* Título principal más grande */
+      color: #3498db; /* Un azul profesional como acento */
     }
     
     a {
-      color: #39FF14; /* Slightly brighter neon green */
-      text-decoration: none;
-      border-bottom: 1px dotted #39FF14;
+      color: #3498db; /* El mismo azul para todos los enlaces */
+      text-decoration: none; /* Sin subrayado por defecto */
     }
 
     a:hover {
-      color: #FFFFFF;
-      background-color: #00FF00;
-      text-shadow: 0 0 5px #000;
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+      color: #5dade2; /* Un azul un poco más claro */
     }
     
     section {
-      margin-bottom: 2rem;
-      border-bottom: 1px dashed rgba(0, 255, 0, 0.3);
-      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #333; /* Separador gris oscuro */
+      padding-bottom: 2rem;
     }
     
-    /* The star: the project box */
+    /* La "caja" del proyecto, ahora limpia y moderna */
     .proyecto {
-      background-color: #050a05; /* Very dark green-black background */
-      padding: 1.5rem;
-      border: 1px solid #00FF00;
-      
-      /* Glow effect */
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5),
-                  inset 0 0 10px rgba(0, 255, 0, 0.3);
+      background-color: #1e1e1e; /* Un gris oscuro, como VS Code */
+      padding: 1.5rem 2rem;
+      border: 1px solid #333; /* Borde sutil */
+      border-radius: 8px; /* ¡Bordes redondeados! */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     
     ul {
-      list-style-type: none; /* Remove default bullets */
+      list-style-type: none; /* Aún sin bullets */
       padding-left: 0;
     }
     
-    ul li::before {
-      content: '[*] '; /* List symbol */
-      color: #00FF00;
-      margin-right: 5px;
+    /* Dando espacio a los items de la lista */
+    ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    /* Un estilo sutil para el "Status" */
+    .status-line {
+      color: #aaa;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
-  <h1>Hello, I'm Framcoty (Franco Aparicio)</h1>
+  <h1>Hello, I'm Franco Aparicio (framcoty)</h1>
 
-  <p>Welcome to my personal site. I am passionate about technology, with experience in Linux, networking, VPNs, and automation. I share my technical projects and learnings in cybersecurity here.</p>
+  <p style="font-size: 1.2rem; line-height: 1.6;">Welcome to my personal site. I am passionate about technology, with experience in Linux, networking, VPNs, and automation. I share my technical projects and learnings in cybersecurity here.</p>
   
-  <p>> Status: Building portable pentesting labs.</p>
+  <p class="status-line">> Status: Building portable pentesting labs.</p>
 
   <section class="proyecto">
     <h2>Featured Project: RPi WireGuard "Implant"</h2>
@@ -128,11 +119,11 @@
     <h2>Profiles & Contact</h2>
     <p>You can reach me via email or find my work on the following platforms.</p>
     <ul>
-      <li>Email: <a href="mailto:contacto.framcoty@proton.me">contacto.framcoty@proton.me</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/franco-aparicio-004a7b292/" target="_blank">linkedin.com/in/franco-aparicio-004a7b292</a></li>
-      <li>GitHub: <a href="https://github.com/framcoty322" target="_blank">github.com/framcoty322</a></li>
-      <li>Hack The Box: <a href="https://app.hackthebox.com/profile/2054668" target="_blank">app.hackthebox.com/profile/2054668</a></li>
-      <li>Resume: <a href="cv.pdf" download>Download PDF Version</a></li>
+      <li><strong>Email:</strong> <a href="mailto:contacto.framcoty@proton.me">contacto.framcoty@proton.me</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/franco-aparicio-004a7b292/" target="_blank">linkedin.com/in/franco-aparicio-004a7b292</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/framcoty322" target="_blank">github.com/framcoty322</a></li>
+      <li><strong>Hack The Box:</strong> <a href="https://app.hackthebox.com/profile/2054668" target="_blank">app.hackthebox.com/profile/2054668</a></li>
+      <li><strong>Resume:</strong> <a href="cv.pdf" download>Download PDF Version</a></li>
     </ul>
   </section>
 
