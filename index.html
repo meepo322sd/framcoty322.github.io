@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>framcoty :: Technical Portfolio</title>
   <style>
-    /* Fuente monoespaciada 'Hack'
-      Si no la tienes, puedes importarla descomentando la línea de abajo
-      o simplemente depender de 'Courier New' o 'monospace'
+    /* Monospaced font 'Hack'
+       If you don't have it, you can import it by uncommenting the line below
+       or just rely on 'Courier New' or 'monospace'
     */
     /* @import url('https://fonts.googleapis.com/css2?family=Hack:wght@400;700&display=swap'); */
 
     body {
       font-family: 'Hack', 'Courier New', monospace;
       background-color: #000000;
-      color: #00FF00; /* Color de texto verde brillante */
+      color: #00FF00; /* Bright green text color */
       margin: 0;
       padding: 2rem;
-      /* Efecto sutil de scanlines (líneas de monitor antiguo) */
+      /* Subtle scanlines effect (old monitor) */
       background-image: linear-gradient(
         0deg,
         rgba(0, 255, 0, 0.1) 1px,
@@ -26,9 +26,9 @@
       background-size: 100% 4px;
     }
     
-    h1, h2 {
+    h1, h2, h3 {
       color: #00FF00;
-      text-shadow: 0 0 5px #00FF00; /* Ligero brillo */
+      text-shadow: 0 0 5px #00FF00; /* Slight glow */
     }
 
     h1::after {
@@ -37,17 +37,17 @@
       font-weight: bold;
     }
 
-    /* Animación del cursor parpadeante */
+    /* Blinking cursor animation */
     @keyframes blink {
       50% { opacity: 0; }
     }
 
     h2::before {
-      content: '[+] '; /* Símbolo de "prompt" */
+      content: '[+] '; /* "Prompt" symbol */
     }
     
     a {
-      color: #39FF14; /* Verde neón un poco más brillante */
+      color: #39FF14; /* Slightly brighter neon green */
       text-decoration: none;
       border-bottom: 1px dotted #39FF14;
     }
@@ -64,24 +64,24 @@
       padding-bottom: 1.5rem;
     }
     
-    /* La estrella: la caja del proyecto */
+    /* The star: the project box */
     .proyecto {
-      background-color: #050a05; /* Fondo negro-verde muy oscuro */
+      background-color: #050a05; /* Very dark green-black background */
       padding: 1.5rem;
       border: 1px solid #00FF00;
       
-      /* Efecto de brillo (glow) */
+      /* Glow effect */
       box-shadow: 0 0 15px rgba(0, 255, 0, 0.5),
                   inset 0 0 10px rgba(0, 255, 0, 0.3);
     }
     
     ul {
-      list-style-type: none; /* Quitamos los bullets por defecto */
+      list-style-type: none; /* Remove default bullets */
       padding-left: 0;
     }
     
     ul li::before {
-      content: '[*] '; /* Símbolo de lista */
+      content: '[*] '; /* List symbol */
       color: #00FF00;
       margin-right: 5px;
     }
@@ -89,35 +89,51 @@
 </head>
 <body>
 
-  <h1>Hello, I'm Framcoty </h1>
-  <p>Welcome to my personal site. I share my technical projects and learnings in cybersecurity, networking, and systems administration here.</p>
-  <p>> Status: Actively seeking remote cybersecurity opportunities.</p>
+  <h1>Hello, I'm Framcoty (Franco Aparicio)</h1>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am passionate about technology, with experience in Linux, networking, VPNs, and automation. I am currently developing portable pentesting labs using Raspberry Pi and Kali Linux ARM.</p>
-  </section>
+  <p>Welcome to my personal site. I am passionate about technology, with experience in Linux, networking, VPNs, and automation. I share my technical projects and learnings in cybersecurity here.</p>
+  
+  <p>> Status: Building portable pentesting labs.</p>
 
   <section class="proyecto">
-    <h2>Featured Project: RPi WireGuard VPN Gateway</h2>
-    <p>This project connects my laptop to a Raspberry Pi 4 ARM (running Kali Linux) via a WireGuard VPN, using a VPS as a central server. The Raspberry Pi manages multiple WiFi interfaces, one configured as an AP routing traffic through the VPN, all controlled remotely via VNC.</p>
+    <h2>Featured Project: RPi WireGuard "Implant"</h2>
+
+    <h3>The "Mr. Robot" Motivation:</h3>
+    <p>This project is inspired by Red Team scenarios where an attacker (like Elliot) gains physical access to a building and leaves a Raspberry Pi plugged into a hidden network port. The device automatically establishes a secure VPN tunnel to an external server, giving the attacker a persistent foothold *inside* the corporate network. From home, they can now pivot, scan, and audit the entire internal network.</p>
+    <p>This repository provides the scripts and configurations to build that exact tool.</p>
+
     <ul>
-      <li>Advanced routing across multiple interfaces (wlan0, wlan1, wlan2, wg0)</li>
-      <li>Remote graphical access via VNC</li>
-      <li>Secure access from any location</li>
+      <li>Provides persistent, remote access over WireGuard</li>
+      <li>Uses a Raspberry Pi as a portable, drop-in "implant"</li>
+      <li>Routes all traffic from a custom WiFi AP through the secure tunnel</li>
+      <li>Includes VNC for full remote graphical access to the Kali desktop</li>
     </ul>
     <p><strong>Repository:</strong> <a href="https://github.com/framcoty322/vpn-wireguard-rpi-gateway" target="_blank">View on GitHub</a></p>
   </section>
 
   <section>
-    <h2>Resume</h2>
-    <p><a href="cv.pdf" download>Download Resume (PDF)</a></p>
+    <h2>Write-ups & Research</h2>
+    <p>My methodologies for HTB machines, CTFs, and personal projects.</p>
+    <ul>
+      <li>
+        <strong>HTB Write-up: [Machine Name]</strong> (Coming Soon)<br>
+        </li>
+      <li>
+        <strong>CTF Write-up: Bugcrowd Student Qualifier (Rank 31st)</strong> (Coming Soon)<br>
+        </li>
+    </ul>
   </section>
 
   <section>
-    <h2>Contact</h2>
-    <p>You can reach me at: <a href="mailto:contacto.framcoty@proton.me">contacto.framcoty@proton.me</a></p>
-    <p>Or find me on GitHub: <a href="https://github.com/framcoty322" target="_blank">framcoty322</a></p>
+    <h2>Profiles & Contact</h2>
+    <p>You can reach me via email or find my work on the following platforms.</p>
+    <ul>
+      <li>Email: <a href="mailto:contacto.framcoty@proton.me">contacto.framcoty@proton.me</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/franco-aparicio-004a7b292/" target="_blank">linkedin.com/in/franco-aparicio-004a7b292</a></li>
+      <li>GitHub: <a href="https://github.com/framcoty322" target="_blank">github.com/framcoty322</a></li>
+      <li>Hack The Box: <a href="https://app.hackthebox.com/profile/2054668" target="_blank">app.hackthebox.com/profile/2054668</a></li>
+      <li>Resume: <a href="cv.pdf" download>Download PDF Version</a></li>
+    </ul>
   </section>
 
 </body>
